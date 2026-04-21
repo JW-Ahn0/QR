@@ -1,7 +1,10 @@
 {
   "Meta": {
-    "title": "Free URL QR Code Generator",
-    "description": "Turn URLs into QR codes for free. Transparent background, style options, and instant download."
+    "title": "Free URL & Address QR Code Generator | Online QR Maker",
+    "description": "Turn URLs and web addresses into QR codes for free. Create link QR codes with transparent backgrounds, custom styles, and instant PNG, JPEG, WebP, or SVG download—no sign-up required.",
+    "keywords": "free QR code generator,URL to QR,address QR code,link QR code,web address QR,online QR maker,QR code creator,free QR download,transparent QR,URL QR converter,make QR from link",
+    "siteName": "Free URL & Address QR Generator",
+    "ogImageAlt": "Preview of the free URL and address to QR code generator"
   },
   "LocaleSwitcher": {
     "ko": "한국어",
@@ -21,7 +24,8 @@
   },
   "QrDownloadBar": {
     "format": "Format",
-    "download": "Download"
+    "download": "Download",
+    "jpegNoTransparency": "JPEG does not support transparent backgrounds."
   },
   "Nav": {
     "styleRegion": "Style sections",
@@ -44,7 +48,8 @@
   "BackgroundPanel": {
     "transparent": "Transparent background",
     "transparentHint": "When on, the background is transparent. When off, the solid color below is used.",
-    "solidColor": "Background color"
+    "solidColor": "Background color",
+    "jpegNoTransparency": "JPEG does not support transparent backgrounds. Transparent mode is turned off while JPEG is selected."
   },
   "LayoutPanel": {
     "width": "Width (px)",

@@ -1,12 +1,19 @@
 "use client";
 
-import { Link, usePathname } from "@/i18n/routing";
+import { useMemo } from "react";
+import { usePathname as useNextPathname } from "next/navigation";
+import { Link } from "@/i18n/routing";
+import { toUnprefixedPathname } from "@/lib/i18n-pathname";
 import { cn } from "@/lib/utils";
 import { useLocale, useTranslations } from "next-intl";
 
 export function LocaleSwitcher() {
   const locale = useLocale();
-  const pathname = usePathname();
+  const nextPathname = useNextPathname();
+  const pathname = useMemo(
+    () => toUnprefixedPathname(nextPathname ?? "/"),
+    [nextPathname],
+  );
   const t = useTranslations("LocaleSwitcher");
 
   const item = (l: "ko" | "en", label: string) => (

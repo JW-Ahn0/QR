@@ -166,9 +166,9 @@ export function LayoutPanel({ state, setState }: Props) {
             <SelectValue />
           </SelectTrigger>
           <SelectContent>
-            {DRAW_TYPES.map((t) => (
-              <SelectItem key={t} value={t}>
-                {t}
+            {DRAW_TYPES.map((drawType) => (
+              <SelectItem key={drawType} value={drawType}>
+                {drawType}
               </SelectItem>
             ))}
           </SelectContent>

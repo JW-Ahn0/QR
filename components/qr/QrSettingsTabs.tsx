@@ -7,17 +7,19 @@ import { ImagePanel } from "@/components/qr/panels/ImagePanel";
 import { LayoutPanel } from "@/components/qr/panels/LayoutPanel";
 import { Button } from "@/components/ui/button";
 import type { QrFormState } from "@/lib/qr-code-styling-options";
+import type { DownloadExtension } from "@/lib/qr-constants";
 import { useTranslations } from "next-intl";
 import { useMemo, useState } from "react";
 
 type Props = {
   state: QrFormState;
   setState: React.Dispatch<React.SetStateAction<QrFormState>>;
+  downloadExtension: DownloadExtension;
 };
 
 type SectionId = "layout" | "dots" | "corners" | "bg" | "image";
 
-export function QrSettingsTabs({ state, setState }: Props) {
+export function QrSettingsTabs({ state, setState, downloadExtension }: Props) {
   const [section, setSection] = useState<SectionId>("layout");
   const t = useTranslations("Nav");
 
@@ -69,7 +71,11 @@ export function QrSettingsTabs({ state, setState }: Props) {
           <CornersPanel state={state} setState={setState} />
         ) : null}
         {section === "bg" ? (
-          <BackgroundPanel state={state} setState={setState} />
+          <BackgroundPanel
+            state={state}
+            setState={setState}
+            downloadExtension={downloadExtension}
+          />
         ) : null}
         {section === "image" ? (
           <ImagePanel state={state} setState={setState} />

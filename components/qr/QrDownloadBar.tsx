@@ -13,24 +13,29 @@ import type { DownloadExtension } from "@/lib/qr-constants";
 import { DOWNLOAD_EXTENSIONS, DOWNLOAD_FILE_BASENAME } from "@/lib/qr-constants";
 import { Download } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { useState } from "react";
 
 type Props = {
   disabled: boolean;
+  extension: DownloadExtension;
+  onExtensionChange: (extension: DownloadExtension) => void;
   onDownload: (extension: DownloadExtension) => void;
 };
 
-export function QrDownloadBar({ disabled, onDownload }: Props) {
+export function QrDownloadBar({
+  disabled,
+  extension,
+  onExtensionChange,
+  onDownload,
+}: Props) {
   const t = useTranslations("QrDownloadBar");
-  const [ext, setExt] = useState<DownloadExtension>("png");
 
   return (
     <div className="flex flex-col gap-3 sm:flex-row sm:items-end">
       <div className="grid w-full flex-1 gap-2 sm:max-w-xs">
         <Label>{t("format")}</Label>
         <Select
-          value={ext}
-          onValueChange={(v) => setExt(v as DownloadExtension)}
+          value={extension}
+          onValueChange={(v) => onExtensionChange(v as DownloadExtension)}
           disabled={disabled}
         >
           <SelectTrigger className="w-full">
@@ -44,12 +49,15 @@ export function QrDownloadBar({ disabled, onDownload }: Props) {
             ))}
           </SelectContent>
         </Select>
+        {extension === "jpeg" ? (
+          <p className="text-muted-foreground text-xs">{t("jpegNoTransparency")}</p>
+        ) : null}
       </div>
       <Button
         type="button"
         className="w-full shrink-0 sm:mb-0.5 sm:w-auto"
         disabled={disabled}
-        onClick={() => onDownload(ext)}
+        onClick={() => onDownload(extension)}
       >
         <Download className="size-4" />
         {t("download")}

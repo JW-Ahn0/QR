@@ -8,7 +8,7 @@ import { QrSettingsTabs } from "@/components/qr/QrSettingsTabs";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useDebouncedValue } from "@/hooks/use-debounced-value";
 import { defaultQrFormState } from "@/lib/qr-defaults";
-import { buildOptions } from "@/lib/qr-code-styling-options";
+import { buildOptions, formStateForDownload } from "@/lib/qr-code-styling-options";
 import type { DownloadExtension } from "@/lib/qr-constants";
 import {
   DEFAULT_QR_PAYLOAD,
@@ -25,6 +25,8 @@ export function QrWorkspace() {
   const [payload, setPayload] = useState(DEFAULT_QR_PAYLOAD);
   const debouncedPayload = useDebouncedValue(payload, PAYLOAD_DEBOUNCE_MS);
   const [form, setForm] = useState(defaultQrFormState);
+  const [downloadExtension, setDownloadExtension] =
+    useState<DownloadExtension>("png");
 
   const mountRef = useRef<HTMLDivElement>(null);
   const qrRef = useRef<QRCodeStyling | null>(null);
@@ -50,10 +52,28 @@ export function QrWorkspace() {
     }
   }, [form, debouncedPayload]);
 
+  const handleDownloadExtensionChange = (next: DownloadExtension) => {
+    setDownloadExtension((prev) => {
+      if (next === "jpeg") {
+        setForm((p) => ({
+          ...p,
+          background: { ...p.background, transparent: false },
+        }));
+      } else if (prev === "jpeg") {
+        setForm((p) => ({
+          ...p,
+          background: { ...p.background, transparent: true },
+        }));
+      }
+      return next;
+    });
+  };
+
   const handleDownload = (extension: DownloadExtension) => {
     const trimmed = debouncedPayload.trim();
     if (!trimmed || !qrRef.current) return;
-    qrRef.current.update(buildOptions(form, trimmed));
+    const stateForFile = formStateForDownload(form, extension);
+    qrRef.current.update(buildOptions(stateForFile, trimmed));
     void qrRef.current.download({
       extension,
       name: DOWNLOAD_FILE_BASENAME,
@@ -86,7 +106,12 @@ export function QrWorkspace() {
             <p className="text-muted-foreground text-sm">{t("emptyHint")}</p>
           ) : null}
           <div className="border-t border-border pt-4">
-            <QrDownloadBar disabled={!hasPayload} onDownload={handleDownload} />
+            <QrDownloadBar
+              disabled={!hasPayload}
+              extension={downloadExtension}
+              onExtensionChange={handleDownloadExtensionChange}
+              onDownload={handleDownload}
+            />
           </div>
         </CardContent>
       </Card>
@@ -117,7 +142,11 @@ export function QrWorkspace() {
               <CardTitle className="text-sm font-medium">{t("styleTitle")}</CardTitle>
             </CardHeader>
             <CardContent className="px-3 pt-0 sm:px-4">
-              <QrSettingsTabs state={form} setState={setForm} />
+              <QrSettingsTabs
+                state={form}
+                setState={setForm}
+                downloadExtension={downloadExtension}
+              />
             </CardContent>
           </Card>
           <AdSlot device="desktop" />

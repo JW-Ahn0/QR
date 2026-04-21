@@ -1,3 +1,4 @@
+import type { DownloadExtension } from "@/lib/qr-constants";
 import type {
   CornerDotType,
   CornerSquareType,
@@ -47,6 +48,21 @@ export type QrFormState = {
     margin: number;
   };
 };
+
+/** JPEG은 알파가 없어 다운로드 시 항상 불투명 배경이 필요하다. */
+export function formStateForDownload(
+  state: QrFormState,
+  extension: DownloadExtension,
+): QrFormState {
+  if (extension !== "jpeg") return state;
+  return {
+    ...state,
+    background: {
+      ...state.background,
+      transparent: false,
+    },
+  };
+}
 
 export function buildOptions(state: QrFormState, data: string): Options {
   const bg = state.background;

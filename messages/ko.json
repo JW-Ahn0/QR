@@ -1,7 +1,10 @@
 {
   "Meta": {
-    "title": "URL QR 무료 생성",
-    "description": "URL을 QR로 무료 생성 하세요! 투명 배경 지원! 스타일 옵션 변경 가능! 무료로 사용할 수 있습니다."
+    "title": "무료 URL·주소 QR 생성 | URL QR 변환·다운로드",
+    "description": "웹 주소·링크를 QR 코드로 무료 변환합니다. 무료 QR 생성, 주소 QR·URL QR, 투명 배경과 스타일 옵션, PNG·JPEG·WebP·SVG 다운로드. 회원가입 없이 바로 사용하세요.",
+    "keywords": "URL QR 변환,무료 QR 생성,주소 QR,주소 QR 생성,링크 QR,웹 주소 QR,QR 코드 만들기,QR 무료,QR 다운로드,투명 배경 QR,온라인 QR 생성기,URL QR 코드,주소 QR 코드",
+    "siteName": "무료 URL·주소 QR 생성",
+    "ogImageAlt": "URL·주소를 QR 코드로 무료 변환하는 서비스 미리보기"
   },
   "LocaleSwitcher": {
     "ko": "한국어",
@@ -21,7 +24,8 @@
   },
   "QrDownloadBar": {
     "format": "형식",
-    "download": "다운로드"
+    "download": "다운로드",
+    "jpegNoTransparency": "JPEG 형식은 투명 배경을 지원하지 않습니다."
   },
   "Nav": {
     "styleRegion": "스타일 구역",
@@ -44,7 +48,8 @@
   "BackgroundPanel": {
     "transparent": "투명 배경",
     "transparentHint": "켜면 투명 배경이 적용되고, 끄면 아래 단색이 배경으로 쓰입니다.(배경 색 조정 가능)",
-    "solidColor": "배경 색"
+    "solidColor": "배경 색",
+    "jpegNoTransparency": "JPEG 형식은 투명 배경을 지원하지 않습니다. JPEG를 선택한 동안에는 투명 배경이 꺼지며 전환할 수 없습니다."
   },
   "LayoutPanel": {
     "width": "가로 (px)",
