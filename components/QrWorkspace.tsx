@@ -1,6 +1,5 @@
 "use client";
 
-import { AdSlot } from "@/components/ads/AdSlot";
 import { QrDownloadBar } from "@/components/qr/QrDownloadBar";
 import { QrPayloadField } from "@/components/qr/QrPayloadField";
 import { QrScanHint } from "@/components/qr/QrScanHint";
@@ -94,8 +93,6 @@ export function QrWorkspace() {
         </div>
       </header>
 
-      <AdSlot device="mobile" />
-
       <Card>
         <CardHeader>
           <CardTitle className="text-base">{t("cardUrlTitle")}</CardTitle>
@@ -115,8 +112,6 @@ export function QrWorkspace() {
           </div>
         </CardContent>
       </Card>
-
-      <AdSlot device="mobile" className="min-h-[90px]" />
 
       <div className="grid gap-8 lg:grid-cols-[1fr_minmax(260px,320px)] xl:grid-cols-[1fr_340px]">
         <Card className="h-fit min-w-0 lg:sticky lg:top-6">
@@ -149,11 +144,8 @@ export function QrWorkspace() {
               />
             </CardContent>
           </Card>
-          <AdSlot device="desktop" />
         </div>
       </div>
-
-      <AdSlot device="mobile" className="min-h-[100px]" />
     </div>
   );
 }

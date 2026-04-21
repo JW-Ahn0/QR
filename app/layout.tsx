@@ -25,6 +25,13 @@ export default async function RootLayout({
       suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <head>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6370961139863105"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body className="flex min-h-full flex-col">{children}</body>
     </html>
   );

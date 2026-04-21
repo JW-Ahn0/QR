@@ -69,12 +69,5 @@
   "QrScanHint": {
     "title": "Scanning tip",
     "body": "A large center image can cover data modules and make scanning fail."
-  },
-  "AdSlot": {
-    "ariaMobile": "Mobile ad slot",
-    "ariaDesktop": "Desktop ad slot",
-    "badge": "Ad space",
-    "hintMobile": "Mobile banner (planned)",
-    "hintDesktop": "Desktop sidebar (planned)"
   }
 }

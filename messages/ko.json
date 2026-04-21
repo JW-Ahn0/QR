@@ -69,12 +69,5 @@
   "QrScanHint": {
     "title": "스캔 확인 권장",
     "body": "중앙 이미지가 크면 데이터 패턴이 가려져 스캔이 실패할 수 있습니다."
-  },
-  "AdSlot": {
-    "ariaMobile": "모바일 광고 슬롯",
-    "ariaDesktop": "PC 광고 슬롯",
-    "badge": "광고 영역",
-    "hintMobile": "모바일 배너 예정",
-    "hintDesktop": "PC 사이드 예정"
   }
 }
