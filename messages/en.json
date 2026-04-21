@@ -69,5 +69,206 @@
   "QrScanHint": {
     "title": "Scanning tip",
     "body": "A large center image can cover data modules and make scanning fail."
+  },
+  "Footer": {
+    "guide": "Guide",
+    "about": "About",
+    "contact": "Contact",
+    "privacy": "Privacy Policy",
+    "terms": "Terms",
+    "faq": "FAQ",
+    "disclaimer": "This service encodes what you enter into a QR code. You are responsible for how you use the generated QR code and the outcome."
+  },
+  "Privacy": {
+    "title": "Privacy Policy",
+    "description": "This policy explains how we handle information when you use the service.",
+    "updatedAt": "2026-04-21",
+    "sections": {
+      "collect": {
+        "title": "Information we collect",
+        "items": [
+          "The service does not require sign-up and does not intentionally collect sensitive personal data.",
+          "Your input (URL/text) is used only to generate the QR code and is not stored by us (processed in the browser).",
+          "Basic access logs and device information (e.g., IP, User-Agent) may be collected by hosting/analytics providers for security and reliability."
+        ]
+      },
+      "purpose": {
+        "title": "How we use information",
+        "items": [
+          "Provide QR code generation",
+          "Improve stability/security and prevent abuse"
+        ]
+      },
+      "storage": {
+        "title": "Retention",
+        "body": "We do not store your input content. Operational logs may be retained for a limited time and then deleted."
+      },
+      "thirdParty": {
+        "title": "Third-party services",
+        "body": "We may use third-party hosting/CDN services to operate the site. We do not sell or share your input content with third parties."
+      },
+      "cookies": {
+        "title": "Cookies and ads",
+        "body": "Cookies may be used to improve experience or serve ads. You can control cookies in your browser settings."
+      },
+      "rights": {
+        "title": "Your rights",
+        "body": "If you have questions or requests regarding personal data, contact us using the method below."
+      },
+      "contact": {
+        "title": "Contact",
+        "body": "Please reach out via the email on the Contact page."
+      }
+    }
+  },
+  "Terms": {
+    "title": "Terms of Service",
+    "description": "These terms govern your use of the service.",
+    "updatedAt": "2026-04-21",
+    "sections": {
+      "acceptance": {
+        "title": "Acceptance",
+        "body": "By using the service, you agree to these terms."
+      },
+      "service": {
+        "title": "Service",
+        "items": [
+          "We provide QR code generation and download features for URLs/text.",
+          "We may change or discontinue features without notice.",
+          "Maintenance may occur to improve performance and reliability."
+        ]
+      },
+      "user": {
+        "title": "User responsibilities",
+        "items": [
+          "Do not use the service for illegal content, malware, or harmful links.",
+          "Do not abuse the service with excessive automated requests or attacks."
+        ]
+      },
+      "ip": {
+        "title": "Intellectual property",
+        "body": "The service UI and code are owned by the service provider. You may use the service for personal or legitimate business purposes within these terms."
+      },
+      "disclaimer": {
+        "title": "Disclaimer",
+        "body": "The service is provided “as is”. We are not liable for outcomes such as scan failures or incorrect URLs."
+      },
+      "changes": {
+        "title": "Changes to terms",
+        "body": "We may update these terms and will provide notice by posting updates on the site."
+      }
+    }
+  },
+  "About": {
+    "title": "About",
+    "description": "A simple tool to turn a URL or text into a QR code and download it in multiple formats for free.",
+    "sections": {
+      "what": {
+        "title": "What is this?",
+        "body": "Paste a URL or enter text to generate a QR code instantly and download it."
+      },
+      "features": {
+        "title": "Key features",
+        "items": [
+          "Download as PNG/JPEG/WebP/SVG",
+          "Customize colors, corners, background, and logo",
+          "Fast, no sign-up required"
+        ]
+      },
+      "data": {
+        "title": "Data handling",
+        "body": "Your input is used only for generation. Avoid entering sensitive personal information."
+      },
+      "notice": {
+        "title": "Tips",
+        "body": "If scanning fails, reduce logo size, increase contrast, and leave enough margin."
+      }
+    }
+  },
+  "Contact": {
+    "title": "Contact",
+    "description": "For questions, partnerships, or bug reports, contact us by email.",
+    "email": "jun.woo.an0@gmail.com",
+    "sections": {
+      "email": { "title": "Email" },
+      "scope": {
+        "title": "What you can contact us about",
+        "items": [
+          "Bug reports",
+          "Feature requests",
+          "Policy/copyright inquiries"
+        ]
+      },
+      "links": {
+        "title": "Related",
+        "items": ["Privacy Policy", "Terms", "FAQ"]
+      }
+    }
+  },
+  "Faq": {
+    "title": "FAQ",
+    "description": "Common questions and answers.",
+    "items": {
+      "q1": {
+        "title": "How do I convert a URL to a QR code?",
+        "body": "Paste your URL into the input field on the home page. A preview updates automatically—choose a format and download."
+      },
+      "q2": {
+        "title": "Which formats support a transparent background?",
+        "body": "PNG/WebP/SVG can be transparent. JPEG doesn’t support transparency, so it’s turned off automatically."
+      },
+      "q3": {
+        "title": "Scanning doesn’t work well.",
+        "body": "Reduce the center logo size, increase contrast between modules and background, and keep enough margin."
+      },
+      "q4": {
+        "title": "Do you store my input URL/text?",
+        "body": "We don’t store your input content. Minimal access logs may exist for security and reliability."
+      },
+      "q5": {
+        "title": "Can I use the generated QR codes commercially?",
+        "body": "Yes, you can use them at your own responsibility. Illegal or abusive use is not allowed."
+      }
+    }
+  },
+  "Guide": {
+    "title": "URL to QR Guide",
+    "description": "How to make an address (URL) QR code and choose the best format.",
+    "sections": {
+      "how": {
+        "title": "How to turn a URL into a QR code",
+        "steps": [
+          "Paste your URL (web address) into the input on the home page.",
+          "Check that the preview QR code is generated automatically.",
+          "Choose a format (PNG/JPEG/WebP/SVG).",
+          "Click Download to save the file."
+        ]
+      },
+      "format": {
+        "title": "Format tips",
+        "items": [
+          "PNG: Most common and supports transparency.",
+          "SVG: Vector format—great for printing and scaling.",
+          "WebP: Smaller files and supports transparency (compatibility may vary).",
+          "JPEG: Does not support transparency."
+        ]
+      },
+      "tips": {
+        "title": "Improve scan reliability",
+        "items": [
+          "Increase contrast between modules and background.",
+          "Keep the center logo small.",
+          "Leave enough margin (quiet zone)."
+        ]
+      },
+      "safe": {
+        "title": "Safe use",
+        "body": "Use trustworthy domains and double-check links to avoid being mistaken for phishing or malicious URLs."
+      },
+      "next": {
+        "title": "Need help?",
+        "body": "If scanning fails or print quality looks off, check the FAQ or contact us."
+      }
+    }
   }
 }

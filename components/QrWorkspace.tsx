@@ -1,5 +1,6 @@
 "use client";
 
+import { Link } from "@/i18n/routing";
 import { QrDownloadBar } from "@/components/qr/QrDownloadBar";
 import { QrPayloadField } from "@/components/qr/QrPayloadField";
 import { QrScanHint } from "@/components/qr/QrScanHint";
@@ -21,6 +22,7 @@ import { useLayoutEffect, useRef, useState } from "react";
 
 export function QrWorkspace() {
   const t = useTranslations("QrWorkspace");
+  const tFooter = useTranslations("Footer");
   const [payload, setPayload] = useState(DEFAULT_QR_PAYLOAD);
   const debouncedPayload = useDebouncedValue(payload, PAYLOAD_DEBOUNCE_MS);
   const [form, setForm] = useState(defaultQrFormState);
@@ -146,6 +148,30 @@ export function QrWorkspace() {
           </Card>
         </div>
       </div>
+
+      <footer className="pt-2">
+        <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm">
+          <Link className="text-muted-foreground hover:text-foreground hover:underline" href="/guide">
+            {tFooter("guide")}
+          </Link>
+          <Link className="text-muted-foreground hover:text-foreground hover:underline" href="/about">
+            {tFooter("about")}
+          </Link>
+          <Link className="text-muted-foreground hover:text-foreground hover:underline" href="/contact">
+            {tFooter("contact")}
+          </Link>
+          <Link className="text-muted-foreground hover:text-foreground hover:underline" href="/privacy">
+            {tFooter("privacy")}
+          </Link>
+          <Link className="text-muted-foreground hover:text-foreground hover:underline" href="/terms">
+            {tFooter("terms")}
+          </Link>
+          <Link className="text-muted-foreground hover:text-foreground hover:underline" href="/faq">
+            {tFooter("faq")}
+          </Link>
+        </div>
+        <p className="mt-3 text-muted-foreground text-xs">{tFooter("disclaimer")}</p>
+      </footer>
     </div>
   );
 }
