@@ -13,8 +13,8 @@ type Props = {
 
 const OG_LOCALE: Record<string, string> = { ko: "ko_KR", en: "en_US" };
 
-/** `public/OG.png` — SNS·검색 미리보기용 (1200×630 권장). */
-const OG_IMAGE_PATH = "/OG.png";
+/** `public/OG2.png` — SNS·검색 미리보기용 (1200×630 권장). */
+const OG_IMAGE_PATH = "/OG2.png";
 const OG_IMAGE_WIDTH = 1200;
 const OG_IMAGE_HEIGHT = 630;
 
