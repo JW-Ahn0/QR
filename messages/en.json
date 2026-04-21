@@ -1,0 +1,75 @@
+{
+  "Meta": {
+    "title": "Free URL QR Code Generator",
+    "description": "Turn URLs into QR codes for free. Transparent background, style options, and instant download."
+  },
+  "LocaleSwitcher": {
+    "ko": "한국어",
+    "en": "English",
+    "label": "Language"
+  },
+  "QrWorkspace": {
+    "title": "Free URL QR Code Generator",
+    "description": "Enter a URL below to preview your QR code. Download it for free!",
+    "cardUrlTitle": "URL to encode",
+    "emptyHint": "Enter content below to show the preview QR.",
+    "previewTitle": "Preview",
+    "styleTitle": "Style options"
+  },
+  "QrPayloadField": {
+    "label": "URL or text"
+  },
+  "QrDownloadBar": {
+    "format": "Format",
+    "download": "Download"
+  },
+  "Nav": {
+    "styleRegion": "Style sections",
+    "layout": "Layout",
+    "dots": "QR module style",
+    "corners": "Corner style",
+    "bg": "Background",
+    "image": "Image"
+  },
+  "DotsPanel": {
+    "dotType": "QR module style",
+    "dotColor": "Module color"
+  },
+  "CornersPanel": {
+    "outerStyle": "Outer finder pattern style",
+    "outerColor": "Outer finder color",
+    "innerStyle": "Inner corner style",
+    "innerColor": "Inner corner color"
+  },
+  "BackgroundPanel": {
+    "transparent": "Transparent background",
+    "transparentHint": "When on, the background is transparent. When off, the solid color below is used.",
+    "solidColor": "Background color"
+  },
+  "LayoutPanel": {
+    "width": "Width (px)",
+    "height": "Height (px)",
+    "margin": "Margin (px)",
+    "widthHeightHelper": "Updates live · Final {min}–{max}px (clamped on blur)",
+    "marginHelper": "Updates live · {min}–{max}px",
+    "renderType": "Render type"
+  },
+  "ImagePanel": {
+    "upload": "Upload local file",
+    "remove": "Remove image",
+    "bringFront": "Keep logo area clear",
+    "size": "Image size",
+    "margin": "Image margin (px)"
+  },
+  "QrScanHint": {
+    "title": "Scanning tip",
+    "body": "A large center image can cover data modules and make scanning fail."
+  },
+  "AdSlot": {
+    "ariaMobile": "Mobile ad slot",
+    "ariaDesktop": "Desktop ad slot",
+    "badge": "Ad space",
+    "hintMobile": "Mobile banner (planned)",
+    "hintDesktop": "Desktop sidebar (planned)"
+  }
+}

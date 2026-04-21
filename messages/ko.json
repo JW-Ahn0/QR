@@ -1,0 +1,75 @@
+{
+  "Meta": {
+    "title": "URL QR 무료 생성",
+    "description": "URL을 QR로 무료 생성 하세요! 투명 배경 지원! 스타일 옵션 변경 가능! 무료로 사용할 수 있습니다."
+  },
+  "LocaleSwitcher": {
+    "ko": "한국어",
+    "en": "English",
+    "label": "언어"
+  },
+  "QrWorkspace": {
+    "title": "URL QR 무료 생성",
+    "description": "아래 입력창에 URL을 입력하면 미리보기 QR을 생성합니다. 생성한 QR을 무료로 다운로드 하세요!",
+    "cardUrlTitle": "QR 변환 원하는 URL 입력",
+    "emptyHint": "내용을 입력하면 아래에 미리보기 QR이 표시됩니다.",
+    "previewTitle": "미리보기",
+    "styleTitle": "스타일 옵션"
+  },
+  "QrPayloadField": {
+    "label": "URL 또는 텍스트"
+  },
+  "QrDownloadBar": {
+    "format": "형식",
+    "download": "다운로드"
+  },
+  "Nav": {
+    "styleRegion": "스타일 구역",
+    "layout": "레이아웃",
+    "dots": "QR 내부 스타일",
+    "corners": "QR 코너 스타일",
+    "bg": "배경",
+    "image": "이미지"
+  },
+  "DotsPanel": {
+    "dotType": "QR 내부 스타일",
+    "dotColor": "QR 내부 색깔 지정"
+  },
+  "CornersPanel": {
+    "outerStyle": "코너 외부 사각형 스타일",
+    "outerColor": "코너 외부 사각형 색깔 지정",
+    "innerStyle": "코너 내부 사각형 스타일",
+    "innerColor": "코너 내부 사각형 색깔 지정"
+  },
+  "BackgroundPanel": {
+    "transparent": "투명 배경",
+    "transparentHint": "켜면 투명 배경이 적용되고, 끄면 아래 단색이 배경으로 쓰입니다.(배경 색 조정 가능)",
+    "solidColor": "배경 색"
+  },
+  "LayoutPanel": {
+    "width": "가로 (px)",
+    "height": "세로 (px)",
+    "margin": "여백 (px)",
+    "widthHeightHelper": "입력 즉시 반영 · 최종 {min}~{max}px (포커스 해제 시 하한 적용)",
+    "marginHelper": "입력 즉시 반영 · {min}~{max}px",
+    "renderType": "렌더 타입"
+  },
+  "ImagePanel": {
+    "upload": "로컬 파일 업로드",
+    "remove": "이미지 제거",
+    "bringFront": "이미지 맨 앞으로 보내기",
+    "size": "이미지 사이즈 조정",
+    "margin": "이미지 마진 조정(px)"
+  },
+  "QrScanHint": {
+    "title": "스캔 확인 권장",
+    "body": "중앙 이미지가 크면 데이터 패턴이 가려져 스캔이 실패할 수 있습니다."
+  },
+  "AdSlot": {
+    "ariaMobile": "모바일 광고 슬롯",
+    "ariaDesktop": "PC 광고 슬롯",
+    "badge": "광고 영역",
+    "hintMobile": "모바일 배너 예정",
+    "hintDesktop": "PC 사이드 예정"
+  }
+}
